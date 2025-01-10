@@ -24,6 +24,8 @@ dependencies {
 
 	//JdbcTemplate 추가
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//MyBatis 추가 (스프링 자체적으로 관리해주지 않는 라이브러리 => 버전 정보 포함)
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 	//H2 데이터베이스 추가
 	runtimeOnly 'com.h2database:h2'
 	compileOnly 'org.projectlombok:lombok'
