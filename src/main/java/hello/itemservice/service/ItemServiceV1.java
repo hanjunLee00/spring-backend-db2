@@ -4,6 +4,7 @@ import hello.itemservice.domain.Item;
 import hello.itemservice.repository.ItemRepository;
 import hello.itemservice.repository.ItemSearchCond;
 import hello.itemservice.repository.ItemUpdateDto;
+import hello.itemservice.repository.jpa.SpringDataJpaItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class ItemServiceV1 implements ItemService {
 
     private final ItemRepository itemRepository;
+//    private final SpringDataJpaItemRepository springDataJpaItemRepository;
 
     @Override
     public Item save(Item item) {

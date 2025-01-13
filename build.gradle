@@ -4,6 +4,9 @@ plugins {
 	id 'java'
 }
 
+//5.6.6, 5.6.7 버전을 사용하면 Like 문장을 사용할 때 예외 발생
+ext["hibernate.version"] = "5.6.5.Final"
+
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -21,9 +24,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-
+	//JPA, 스프링 데이터 JPA 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	//JdbcTemplate 추가
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	//MyBatis 추가 (스프링 자체적으로 관리해주지 않는 라이브러리 => 버전 정보 포함)
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 	//H2 데이터베이스 추가
